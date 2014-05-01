@@ -7,17 +7,17 @@ public class ListArrayListBased implements ListInterface
 {
   // reference to linked list of items
    private ArrayList<Object> list;
-
+   //creates new list
    public ListArrayListBased() 
    {
       list = new ArrayList<Object>();
    }   
-   
+   //returns size if equal to zero
    public boolean isEmpty() 
    {
       return list.size() == 0;
    }
-
+//returns size
    public int size() 
    {
       return list.size();

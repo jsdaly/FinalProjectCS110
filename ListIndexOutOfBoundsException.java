@@ -1,3 +1,6 @@
+/**
+ListIndexOutOfBoundsException throws exception
+*/
 public class ListIndexOutOfBoundsException 
             extends IndexOutOfBoundsException {
   public ListIndexOutOfBoundsException(String s) {

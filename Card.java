@@ -3,7 +3,7 @@
  * A card consists of a suit value and a rank value.  Once instantiated, the
  * Card object cannot change.
  *
- * @Jackie Horton
+ * 
  */
 
 public class Card 
@@ -107,31 +107,33 @@ public class Card
            default:  return "??";
         }
     }
-   /**
-   * Returns a description of this card.
-   * @return the name of the card.
-   */
-
-    public String toString() 
-    {
-        return getRankAsString() + " of " + getSuitAsString();
-    }
-    
+   
+      
    /**
    * Compares two cards to determine if they have the same value.
    * @param card the other card
-   * @return true if the two cards have the same rank and suitvalues,
-   * falseotherwise.
-   */
-   public boolean equals(Card otherCard ) 
+   * @return 1 if card1 is greater, -1 if card 2 is greater
+     and 0 if equal   */
+   public int compareTo(Card card1, Card card2 ) 
    {
-      if ( ( rank != otherCard.rank ) || ( suit != otherCard.suit ) )
-         return false;
+      int answer;
+      if (card1.getRank()>card2.getRank())
+         {answer=1;
+         return answer;}
+      else if (card2.getRank()>card1.getRank())
+         {answer=-1;
+         return answer;}
       else
-         return true;
+         {answer=0;
+         return answer;}
    }
 
-   public String getString() 
+   /**
+   * Looks at rank and suit and changes value to string
+   * @param rank and suit
+   * @return string  */
+
+   public String toString() 
     {
         String stringRank = " ";
         
@@ -149,13 +151,13 @@ public class Card
         String stringSuit = " ";
         
         if(suit == SPADES)
-            stringSuit = "spade";
+            stringSuit = "s";
         else if (suit == HEARTS)
-            stringSuit = "heart";
+            stringSuit = "h";
         else if (suit == DIAMONDS)
-            stringSuit = "diamond";
+            stringSuit = "d";
         else if (suit == CLUBS)
-            stringSuit = "club";
+            stringSuit = "c";
             
         String string = stringRank + stringSuit;
         
