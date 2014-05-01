@@ -34,9 +34,10 @@ public class Deck
       for (int i = 1; i < deck.size(); i++)
       {
          randNum = r.nextInt(deck.size());
-         temp = deck.get(i);
-         deck.set(i,deck.get(randNum));
-         deck.set(randNum,temp);
+         temp = (Card)(deck.get(i));
+         deck.add(i,(Card)(deck.get(randNum)));
+         deck.add(randNum,temp);
+         
       }      
    }
   public Card draw()

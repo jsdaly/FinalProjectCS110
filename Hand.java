@@ -1,7 +1,7 @@
 public class Hand extends Deck
 {
    private final int HALF = 26;
-   private ListArrayListBased pile;
+   private ListArrayListBased hand;
    
    public Hand(Deck deck)
    {
